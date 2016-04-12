@@ -1,0 +1,298 @@
+/*Outstanding issues: Make nav slide left, push UX Designer stuff. 2) Center #navlabel */
+
+body, html {
+    font-family: helvetica;
+    font-weight: 100;
+}
+#app  {
+  margin-right: 15px;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+h1  {
+  font-size:78px;
+  font-weight: bolder;
+}
+
+h2  {
+  font-size: 20px;
+}
+
+blockquote  {
+  text-align: center;
+  padding:5%;
+  vertical-align: middle;
+  display:block;
+  font-size: 50px;
+}
+
+.button a {
+  font-size: 35px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #33333;
+  display: inline-block;
+  color:black;
+  font-size:20px;
+  width:66px;
+  height:50px;
+
+}
+
+.hero_copy {
+  text-align: center;
+  vertical-align: middle;
+  color:white;
+}
+
+section.featured_work .copy {
+  position: absolute;
+  z-index: 10;
+  left:5vw;
+  right:8vw;
+}
+
+.featured_work .copy h4 {
+    font-family: serif;
+    font-weight: 700;
+    line-height: 1em;
+    text-rendering: geometricPrecision;
+    word-wrap: break-word;
+    font-size: 30px;
+}
+
+
+/*Sidebar Styling */
+#logoVS {
+    pointer-events: all;
+    right:0;
+    top:0;
+    width: 89px;
+    height: 89px;
+    z-index: 101;
+    position: absolute;
+    background-image: url(images/VSlogo.png);
+    background-position: 26px 26px;
+    background-repeat: no-repeat;
+    background-size: 38px 38px;
+    cursor: pointer;
+}
+
+#navlabel  {
+  position:absolute;
+  display:block;
+  z-index:101;
+  width:89px;
+  top:90px;
+  bottom:90px;
+  right:0;
+  text-align: center;
+
+}
+
+#sidebar #navlabel{
+  position:absolute;
+  margin:auto;
+  right:-166px;
+  width:400px;
+  display:block;
+  z-index:101;
+  width:89px;
+  top:90px;
+  bottom:90px;
+  right:0;
+
+}
+
+#sidebar #navlabel p {
+    font-family: kepler-std-display, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    letter-spacing: .019em
+    margin:0;
+    text-transform: uppercase;
+}
+
+#hamburgerbutton {
+    position: fixed;
+    z-index:102;
+    height: 90px;
+    width: 90px;
+    right: 0;
+    bottom:0;
+    border-top: 1px solid #e78c05;
+    transition:  background-color .45s ease-in-out,width .8s cubic-bezier(.9,0,.33,1) .2s,transform 1s cubic-bezier(.25,.46,.45,.94),opacity .6s linear .8s,-webkit-opacity .6s linear .8s,border-top-color .3s ease-out;
+}
+
+
+#sidebar {
+    background: #fbfbfb;
+    border-left: 1px solid rgba(0,0,0,.08);
+    position: fixed;
+    width: 89px;
+    height: 100%;
+    right: 0px;
+    bottom:0;
+    z-index:100;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/*Toggle nav starts here */
+
+#navigation {
+		display:none;
+}
+
+#navigation.open-sidebar {
+		display:block;
+    width:33vw;
+		z-index: 100;
+    background: rgba(231, 140, 50, .7);
+    position: absolute;
+    top:0;
+  	right:0;
+		bottom:0;
+    box-sizing: border-box;
+}
+
+.open-sidebar ul {
+    margin: 0;
+    padding-top: 5px;
+    list-style: none;
+}
+.open-sidebar ul li {
+    margin: 0;
+}
+.open-sidebar ul li a {
+    padding-right: 4px;
+    z-index:100;
+    margin-left: 80px;
+    margin-right: 60px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 60px;
+    position:relative;
+    line-height: 1.08em;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.open-sidebar ul li:hover a {
+    background: #060001;
+}
+
+
+/* Main Content Styling */
+#main_content  {
+  width:100%;
+  margin-right: 90px;
+}
+
+.contentblock {
+  display:block;;
+  position:relative;
+  width:100%;
+  min-height: 1088px;
+  background-color: rgb(244, 244, 244);
+}
+
+.contentblock.quote {
+  box-sizing: border-box;
+}
+
+section.hero .masthead_content {
+  vertical-align:middle;
+}
+
+.hero {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/hero.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  position:relative;
+  overflow:hidden;
+  height: 774px;
+  width:100%;
+  z-index: 0;
+  display:block;
+}
+
+.about {
+  text-align: center;
+  padding:5%;
+  vertical-align: middle;
+  display:block;
+  font-size: 50px;
+}
+
+.featured_work  {
+position:relative;
+box-sizing: border-box;
+background-position: center center;
+background-size: cover;
+cursor:pointer;
+min-height: 300px;
+}
+
+.featured_work.sysco {
+background-image: url("images/food-kitchen-cutting-board-cooking.jpg");
+}
+
+.featured_work.ace {
+  background-image: url("images/ACE_Paint.jpg");
+}
+
+.featured_work.swa {
+  background-image: url("images/swa.jpg");
+}
+
+section {
+    display: inline-table;
+}
+
+section.half  {
+  width:49%;
+  height:645px;
+}
+
+section. >a  {
+  text-decoration: none;
+}
+
+/*footer*/
+.footer {
+  background-color: rgb(51, 51, 51);
+  padding-top: 160px;
+  padding-bottom:160px;
+  position: absolute;
+  width:100%;
+  text-align: center;
+}
+
+#copyright-text  {
+    background: #292929;
+    text-align: center;
+    box-sizing: border-box;
+    width:100%;
+    display: block;
+    padding: 15px 0!important;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    bottom:0;
+}
+
+.footer a   {
+  text-decoration: none;
+  background-color:rgb(51, 51, 51);
+  color: rgb(255, 255, 255)
+
+}
+
+.twitter{
+
+}

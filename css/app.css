@@ -1,0 +1,169 @@
+html
+{
+	font:kepler-std-display,serif;
+	color:#000;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	-ms-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	font-size:1px
+}
+
+html
+{
+	overflow-x:hidden;
+	overflow-y:scroll
+}
+
+body,html
+{
+	background-color:#f4f4f4
+}
+
+body
+{
+	-webkit-transition:background-color .8s ease-in-out 2.4s;
+	transition:background-color .8s ease-in-out 2.4s
+}
+
+#intro
+{
+	position:fixed;
+	top:40%;
+	height:20%;
+	left:40vw;
+	width:20vw
+}
+
+#intro svg
+{
+	height:100%;
+	width:100%
+}
+
+#app
+{
+	width:100%
+}
+
+#content
+{
+	position:relative;
+	opacity:0;
+	-webkit-transition:opacity 1.8s linear .6s;
+	transition:opacity 1.8s linear .6s;
+	margin-left:8px
+}
+
+section
+{
+	display:inline-block;
+	vertical-align:top;
+	background-repeat:no-repeat;
+	box-sizing:border-box;
+	position:relative;
+	overflow:hidden
+}
+
+header
+{
+	position:absolute;
+	z-index:100;
+	color:#000;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	pointer-events:none;
+	display:none
+}
+
+header.open
+{
+	pointer-events:auto
+}
+
+#blackLayer
+{
+	right:0;
+	z-index:100;
+	transition:opacity .5s ease-in-out .2s;
+	pointer-events:none
+}
+
+.open #blackLayer
+{
+	pointer-events:all;
+	opacity:.5;
+	-webkit-transition:opacity .5s ease-in-out 0;
+	transition:opacity .5s ease-in-out 0
+}
+
+#logoSS
+{
+	pointer-events:all;
+	curor:pointer;
+	width:89px;
+	height:89px;
+	z-index:101;
+	position:absolute;
+	background-image:url(/assets/img/logo/ss_black.png);
+	background-repeat:no-repeat;
+	background-size:38px 38px;
+	background-position:26px 26px;
+	cursor:pointer;
+	transform:translateY(-120px);
+	-webkit-transform:translateY(-120px);
+	transition:top .35s ease-in-out,transform .6s cubic-bezier(.19,1,.22,1) .75s,-webkit-transform .6s cubic-bezier(.19,1,.22,1) .75s,border-bottom-color .5s ease-out,opacity .3s ease-out,background-color .4s ease-out
+}
+
+#logoSS.bright
+{
+	background-image:url(/assets/img/logo/ss_white.png)
+}
+
+	.atTop #logoSS
+	{
+		transition:top .25s ease-out 0ms,transform .6s cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .6s cubic-bezier(.19,1,.22,1) 0;
+		top:0
+	}
+
+	.open #logoSS
+	{
+		transition:top .25s ease-in-out,transform .6s cubic-bezier(.19,1,.22,1) .75s,-webkit-transform .6s cubic-bezier(.19,1,.22,1) .75s;
+		top:-90px
+	}
+}
+
+.open #sidebar
+{
+	transition:background-color .45s ease-in-out,width .5s cubic-bezier(.645,.045,.355,1) 0ms,transform 1s cubic-bezier(.25,.46,.45,.94),opacity .6s linear .8s,-webkit-opacity .6s linear .8s
+}
+
+#sidebar .colorbar
+{
+	-webkit-transition:background-color .45s ease-in-out;
+	transition:background-color .45s ease-in-out
+}
+
+#burgerMenuIcon
+{
+	transition:background-color .45s ease-in-out,width .8s cubic-bezier(.9,0,.33,1) .2s,transform 1s cubic-bezier(.25,.46,.45,.94),opacity .6s linear .8s,-webkit-opacity .6s linear .8s,border-top-color .3s ease-out
+}
+
+.open #burgerMenuIcon
+{
+	transition:background-color .45s ease-in-out,width .5s cubic-bezier(.645,.045,.355,1) 0ms,transform 1s cubic-bezier(.25,.46,.45,.94),opacity .6s linear .8s,-webkit-opacity .6s linear .8s,border-top-color .3s ease-out
+}
+
+#burgerMenuIcon
+{
+	pointer-events:all;
+	position:fixed;
+	right:0;
+	width:89px;
+	height:90px
+}
