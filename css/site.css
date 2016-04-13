@@ -5,7 +5,7 @@ body, html {
     font-weight: 100;
 }
 #app  {
-  margin-right: 15px;
+  margin-right: 90px;
 }
 
 a{
@@ -49,6 +49,15 @@ blockquote  {
   color:white;
 }
 
+section.hero .masthead_content  {
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    right: 0;
+    left: 0;
+}
+
 section.featured_work .copy {
   position: absolute;
   z-index: 10;
@@ -87,12 +96,31 @@ section.featured_work .copy {
   display:block;
   z-index:101;
   width:89px;
+  height:530px;
   top:90px;
   bottom:90px;
   right:0;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: color .45s ease-in-out,opacity 1s linear 1.6s;
+  transition: color .45s ease-in-out,opacity 1s linear 1.6s;
+  cursor: pointer;
+}
+#navlabel p{
+  position: absolute;
+  margin: auto;
+  left: -166px;
+  width: 400px;
+  height: 0;
+  will-change: transform;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: .8px;
 
 }
+
 
 #sidebar #navlabel{
   position:absolute;
@@ -149,14 +177,14 @@ section.featured_work .copy {
 
 #navigation.open-sidebar {
 		display:block;
-    width:33vw;
 		z-index: 100;
-    background: rgba(231, 140, 50, .7);
+    background: #f5f5f5;
     position: absolute;
     top:0;
   	right:0;
 		bottom:0;
     box-sizing: border-box;
+    width: 80vw;
 }
 
 .open-sidebar ul {
@@ -195,15 +223,19 @@ section.featured_work .copy {
 }
 
 .contentblock {
-  display:block;;
+  display:inline-block;
   position:relative;
   width:100%;
-  min-height: 1088px;
+  min-height: 500px;
   background-color: rgb(244, 244, 244);
 }
 
+
 .contentblock.quote {
   box-sizing: border-box;
+  height:500px;
+  top:20%;
+  position: absolute;
 }
 
 section.hero .masthead_content {
@@ -212,11 +244,12 @@ section.hero .masthead_content {
 
 .hero {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/hero.jpg");
+  transform: translate3d(0px, 0px, 0px);
   background-size: cover;
   background-position: 50% 50%;
   position:relative;
   overflow:hidden;
-  height: 774px;
+  height: 715px;
   width:100%;
   z-index: 0;
   display:block;
@@ -231,37 +264,121 @@ section.hero .masthead_content {
 }
 
 .featured_work  {
-position:relative;
-box-sizing: border-box;
-background-position: center center;
-background-size: cover;
-cursor:pointer;
-min-height: 300px;
+  position:relative;
+  box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  cursor:pointer;
+  height:100%;
 }
 
 .featured_work.sysco {
-background-image: url("images/food-kitchen-cutting-board-cooking.jpg");
+  background-image: url("images/food-kitchen-cutting-board-cooking.jpg");
+  background-size: cover;
+  background-position: 60% 50%;
 }
 
 .featured_work.ace {
   background-image: url("images/ACE_Paint.jpg");
+  background-size: cover;
+  background-position: 60% 50%;
 }
 
 .featured_work.swa {
   background-image: url("images/swa.jpg");
+  background-size: cover;
+  background-position: 60% 50%;
+}
+
+section .featured_work{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+
 }
 
 section {
-    display: inline-table;
+    display: inline-block;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+section.full  {
+  width:100%;
+  height:545px;
 }
 
 section.half  {
-  width:49%;
-  height:645px;
+  width:50%;
+  height:445px;
 }
 
-section. >a  {
+section.pagelink{
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  cursor:pointer;
+}
+
+section.pagelink .copy {
+  position:absolute;
+  z-index: 10;
+  bottom:32px;
+  left:5vw;
+  right:8vw;
+}
+
+section.pagelink.half .copy {
+  bottom:48px;
+}
+
+section.half>a {
+  height: 100%;
   text-decoration: none;
+}
+
+section.full>a {
+  height: 100%;
+  text-decoration: none;
+}
+
+section a  {
+  display:block;
+  text-decoration: none;
+}
+
+section.pagelink.half .copy p{
+  font-size:16px;
+  font-weight:300;
+  line-height: 100.5px;
+  letter-space: .019px;
+}
+
+section.pagelink.full .copy p{
+  font-size:16px;
+  font-weight:300;
+  line-height: 100.5px;
+  letter-space: .019px;
+}
+
+section.pagelink.half .copy h4{
+  font-size:48px;
+  font-family: serif;
+  font-weight:700;
+  word-wrap: break-word;
+  line-height: 1px;
+}
+
+section.pagelink.full .copy h4{
+  font-size:48px;
+  font-family: serif;
+  font-weight:700;
+  word-wrap: break-word;
+  line-height: 1px;
 }
 
 /*footer*/
