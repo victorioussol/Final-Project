@@ -225,24 +225,26 @@ section.featured_work .copy {
 }
 
 .contentblock {
-  display:inline-block;
   position:relative;
   width:100%;
-  min-height: 500px;
+  height: 596px;
   background-color: rgb(244, 244, 244);
+  display:table-cell;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
-
-.contentblock.quote {
+section.contentblock.quote {
   box-sizing: border-box;
-  height:500px;
   top:20%;
   position: absolute;
+  vertical-align: middle;
+  display:table-cell;
+
 }
 
-section.hero .masthead_content {
-  vertical-align:middle;
-}
 
 .hero {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/hero.jpg");
@@ -251,7 +253,7 @@ section.hero .masthead_content {
   background-position: 50% 50%;
   position:relative;
   overflow:hidden;
-  height: 715px;
+  height: 100%;
   width:100%;
   z-index: 0;
   display:block;
@@ -263,6 +265,7 @@ section.hero .masthead_content {
   vertical-align: middle;
   display:block;
   font-size: 50px;
+  height:100%;
 }
 
 .featured_work  {
@@ -272,6 +275,11 @@ section.hero .masthead_content {
   background-size: cover;
   cursor:pointer;
   height:100%;
+  transition: all .2s ease-in-out;
+}
+
+.featured_work:hover{
+  transform: scale(1.1);
 }
 
 .featured_work.sysco {
@@ -319,11 +327,32 @@ section.half  {
   height:445px;
 }
 
-section.pagelink{
+section.pagelink {
   position: relative;
   background-position: center center;
   background-size: cover;
   cursor:pointer;
+
+}
+
+a .featured_work:hover img {
+    transform: scale(1.5) rotateZ(-5deg);
+    -moz-transform: scale(1.5) rotateZ(-5deg);
+    -webkit-transform: scale(1.5) rotateZ(-5deg);
+    -o-transform: scale(1.5) rotateZ(-5deg);
+}
+
+
+.featured_work:hover .image {
+-webkit-transform:scale(1);
+transform:scale(1);
+}
+
+.image {
+-webkit-transform:scale(1.3);
+transform:scale(1.3);
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
 }
 
 section.pagelink .copy {
