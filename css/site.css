@@ -160,6 +160,8 @@ section.featured_work .copy {
 #sidebar {
     background: #fbfbfb;
     border-left: 1px solid rgba(0,0,0,.08);
+    box-sizing: content-box;
+    margin-right:0;
     position: fixed;
     width: 89px;
     height: 100%;
