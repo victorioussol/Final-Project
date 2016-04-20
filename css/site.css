@@ -1,8 +1,10 @@
 /*Outstanding issues: Make nav slide left, push UX Designer stuff. 2) Center #navlabel */
 
+/*Global Styles*/
+
 body, html {
-    font-family: helvetica;
-    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 #app  {
   margin-right: 90px;
@@ -15,7 +17,7 @@ a{
 
 h1  {
   font-size:78px;
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 h2  {
@@ -30,17 +32,31 @@ blockquote  {
   font-size: 50px;
 }
 
+.button {
+  padding-top: 25px;
+}
+
+.button a:hover {
+  background-color: rgb(231, 140, 5);
+  color:white;
+
+}
+
 .button a {
   font-size: 35px;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #33333;
-  display: inline-block;
+  display: inline-table;
   color:black;
   font-size:20px;
   width:66px;
   height:50px;
+  padding: 10px 48px;
+}
 
+.label  {
+  vertical-align: middle;
+  display:table-cell;
 }
 
 .hero_copy {
@@ -56,6 +72,106 @@ section.hero .masthead_content  {
     margin-top: -50px;
     right: 0;
     left: 0;
+}
+
+/*Featured Work Modules Styling */
+
+section.full  {
+  width:100%;
+  height:545px;
+}
+
+section.half  {
+  width:50%;
+  height:445px;
+}
+
+section.pagelink {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  cursor:pointer;
+
+}
+
+.featured_work  {
+  position:relative;
+  box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  cursor:pointer;
+  height:100%;
+  transition: all .2s ease-in-out;
+}
+
+.featured_work:hover{
+  transform: scale(1.1);
+}
+
+.featured_work.sysco {
+  background-image: url("images/food-kitchen-cutting-board-cooking.jpg");
+}
+
+.featured_work.ace {
+  background-image: url("images/ACE_Paint.jpg");
+}
+
+.featured_work.swa {
+  background-image: url("images/swa.jpg");
+}
+
+a .featured_work:hover img {
+    transform: scale(1.5) rotateZ(-5deg);
+    -moz-transform: scale(1.5) rotateZ(-5deg);
+    -webkit-transform: scale(1.5) rotateZ(-5deg);
+    -o-transform: scale(1.5) rotateZ(-5deg);
+}
+
+.featured_work:hover .image {
+-webkit-transform:scale(1);
+transform:scale(1);
+}
+
+.image {
+  background-size: cover;
+  background-position: 60% 50%;
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+section.pagelink .copy, section.pagelink.half .copy {
+  position:absolute;
+  z-index: 10;
+  bottom:32px;
+  left:5vw;
+  right:8vw;
+}
+
+section.half>a, section.full>a {
+  height: 100%;
+  text-decoration: none;
+}
+
+section a  {
+  display:block;
+  text-decoration: none;
+}
+
+section.pagelink.half .copy p, section.pagelink.full .copy p{
+  font-size:16px;
+  font-weight:300;
+  line-height: 100.5px;
+  letter-space: .019px;
+}
+
+section.pagelink.half .copy h4, section.pagelink.full .copy h4{
+  font-size:48px;
+  font-family: serif;
+  font-weight:700;
+  word-wrap: break-word;
+  line-height: 48px;
 }
 
 section.featured_work .copy {
@@ -74,6 +190,14 @@ section.featured_work .copy {
     font-size: 30px;
 }
 
+section .featured_work{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+
+}
 
 /*Sidebar Styling */
 #logoVS {
@@ -229,7 +353,7 @@ section.featured_work .copy {
   width:100%;
   height: 596px;
   background-color: rgb(244, 244, 244);
-  display:table-cell;
+  display:table;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-right: 5%;
@@ -240,9 +364,14 @@ section.contentblock.quote {
   box-sizing: border-box;
   top:20%;
   position: absolute;
-  vertical-align: middle;
-  display:table-cell;
+}
 
+.quote, .about {
+  height:100%;
+  padding:5%;
+  text-align: center;
+  display:table-cell;
+  vertical-align: middle;
 }
 
 
@@ -260,53 +389,7 @@ section.contentblock.quote {
 }
 
 .about {
-  text-align: center;
-  padding:5%;
-  vertical-align: middle;
-  display:block;
   font-size: 50px;
-  height:100%;
-}
-
-.featured_work  {
-  position:relative;
-  box-sizing: border-box;
-  background-position: center center;
-  background-size: cover;
-  cursor:pointer;
-  height:100%;
-  transition: all .2s ease-in-out;
-}
-
-.featured_work:hover{
-  transform: scale(1.1);
-}
-
-.featured_work.sysco {
-  background-image: url("images/food-kitchen-cutting-board-cooking.jpg");
-  background-size: cover;
-  background-position: 60% 50%;
-}
-
-.featured_work.ace {
-  background-image: url("images/ACE_Paint.jpg");
-  background-size: cover;
-  background-position: 60% 50%;
-}
-
-.featured_work.swa {
-  background-image: url("images/swa.jpg");
-  background-size: cover;
-  background-position: 60% 50%;
-}
-
-section .featured_work{
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-
 }
 
 section {
@@ -317,100 +400,7 @@ section {
     overflow:hidden;
 }
 
-section.full  {
-  width:100%;
-  height:545px;
-}
 
-section.half  {
-  width:50%;
-  height:445px;
-}
-
-section.pagelink {
-  position: relative;
-  background-position: center center;
-  background-size: cover;
-  cursor:pointer;
-
-}
-
-a .featured_work:hover img {
-    transform: scale(1.5) rotateZ(-5deg);
-    -moz-transform: scale(1.5) rotateZ(-5deg);
-    -webkit-transform: scale(1.5) rotateZ(-5deg);
-    -o-transform: scale(1.5) rotateZ(-5deg);
-}
-
-
-.featured_work:hover .image {
--webkit-transform:scale(1);
-transform:scale(1);
-}
-
-.image {
--webkit-transform:scale(1.3);
-transform:scale(1.3);
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-
-section.pagelink .copy {
-  position:absolute;
-  z-index: 10;
-  bottom:32px;
-  left:5vw;
-  right:8vw;
-}
-
-section.pagelink.half .copy {
-  bottom:48px;
-}
-
-section.half>a {
-  height: 100%;
-  text-decoration: none;
-}
-
-section.full>a {
-  height: 100%;
-  text-decoration: none;
-}
-
-section a  {
-  display:block;
-  text-decoration: none;
-}
-
-section.pagelink.half .copy p{
-  font-size:16px;
-  font-weight:300;
-  line-height: 100.5px;
-  letter-space: .019px;
-}
-
-section.pagelink.full .copy p{
-  font-size:16px;
-  font-weight:300;
-  line-height: 100.5px;
-  letter-space: .019px;
-}
-
-section.pagelink.half .copy h4{
-  font-size:48px;
-  font-family: serif;
-  font-weight:700;
-  word-wrap: break-word;
-  line-height: 1px;
-}
-
-section.pagelink.full .copy h4{
-  font-size:48px;
-  font-family: serif;
-  font-weight:700;
-  word-wrap: break-word;
-  line-height: 1px;
-}
 
 /*footer*/
 .footer {
@@ -420,6 +410,16 @@ section.pagelink.full .copy h4{
   position: absolute;
   width:100%;
   text-align: center;
+}
+
+a.mail  {
+  padding-top: 15px;
+}
+
+a.mail:hover  {
+  padding-top: 15px;
+  color:#e78c05;
+  text-decoration: underline;
 }
 
 #copyright-text  {
@@ -434,13 +434,95 @@ section.pagelink.full .copy h4{
     bottom:0;
 }
 
-.footer a   {
-  text-decoration: none;
-  background-color:rgb(51, 51, 51);
-  color: rgb(255, 255, 255)
+/*Social icons*/
+
+@font-face {
+    font-family: 'si';
+    src: url('social_icons/socicon.eot');
+    src: url('social_icons/socicon.eot?#iefix') format('embedded-opentype'),
+         url('social_icons/socicon.woff') format('woff'),
+         url('social_icons/socicon.ttf') format('truetype'),
+         url('social_icons/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
 }
 
-.twitter{
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(social_icons/socicon.svg) format(svg);
+    }
+}
 
+.soc {
+    overflow:visible;
+    margin:0; padding:0;
+    list-style:none;
+}
+
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.soc li a {
+    font-family:si!important;
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    overflow:visible;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 19px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    margin-right: 50px;
+    color: white;
+    background-color: #e78c05;
+}
+
+.soc a:hover {
+    z-index: 2;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+
+.soc-twitter:before {
+    content:'a';
+}
+.soc-skype:before {
+    content:'g';
+}
+.soc-linkedin:before {
+    content:'j';
 }
